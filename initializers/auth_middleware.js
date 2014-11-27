@@ -64,6 +64,7 @@ exports.auth_middleware = function(api, next) {
     }
     return callback(connection, true);
   };
-  api.actions.preProcessors.push(authenticationMiddleware);
+  //api.actions.preProcessors.push(authenticationMiddleware);
+  api.actions.addPreProcessor(authenticationMiddleware);
   return next();
 };

@@ -248,13 +248,13 @@ Auth = function(api, next) {
     errors: {
       user_already_exist: function(message) {
         if (message == null) {
-          message = 'User already exist';
+          message = '该用户已存在';
         }
         return new SignupError(message, 'user_already_exist');
       },
       invalid_credentials: function(message) {
         if (message == null) {
-          message = 'Invalid credentials';
+          message = '密码不正确';
         }
         return new UnauthorizedError(message, 'invalid_credentials');
       }
